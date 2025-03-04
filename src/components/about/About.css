@@ -1,0 +1,113 @@
+.about {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.about__image {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.about__img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about__data {
+  flex: 2;
+  text-align: left;
+}
+
+.about__name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff7b54;
+}
+
+.about__title {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.about__description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  margin-bottom: 1.5rem;
+}
+
+.about__skills-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #ff7b54;
+}
+
+.about__skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about__skills-list li {
+  background: #1e1e2f;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+.about__buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: #ff7b54;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e0663f;
+}
+
+.btn-secondary {
+  background: #4a90e2;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #357ab8;
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}

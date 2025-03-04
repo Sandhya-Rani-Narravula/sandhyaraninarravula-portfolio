@@ -1,0 +1,74 @@
+/* Scroll Down Container */
+.scroll__down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Scroll Text */
+.home__scroll-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ff7b54;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.home__scroll-name:hover {
+    color: #e0663f;
+}
+
+/* Mouse Icon */
+.mouse {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #ff7b54;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
+    position: relative;
+}
+
+/* Wheel Animation */
+.wheel {
+    width: 6px;
+    height: 6px;
+    background: #ff7b54;
+    border-radius: 50%;
+    animation: wheelMove 1.5s infinite ease-in-out;
+}
+
+@keyframes wheelMove {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home__scroll-name {
+        font-size: 0.9rem;
+    }
+
+    .mouse {
+        width: 22px;
+        height: 40px;
+    }
+}

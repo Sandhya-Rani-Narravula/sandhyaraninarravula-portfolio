@@ -1,0 +1,30 @@
+version: "3.6"
+services:
+  sandhyaraninarravula-react-portfolio:
+    build:
+      context: $PWD/../..
+      dockerfile: $PWD/sandhyaraninarravula-react-portfolio/Dockerfile
+    restart: always
+    expose:
+      - "80"
+      - "443"
+    environment:
+      - VIRTUAL_HOST=sandhyaraninarravula.com, www.sandhyaraninarravula.com
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=sandhyaraninarravula.com, www.sandhyaraninarravula.com
+      - LETSENCRYPT_EMAIL=sandhyaraninarravula@hotmail.co.za
+  nginx:
+    image: nginx
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    expose:
+      - 80
+    depends_on:
+      - sandhyaraninarravula-react-portfolio
+    links:
+      - sandhyaraninarravula-react-portfolio
+
+networks:
+  default:
+    external:
+      name: nginx-proxy

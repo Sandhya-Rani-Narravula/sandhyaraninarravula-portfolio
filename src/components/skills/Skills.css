@@ -1,0 +1,36 @@
+.skills {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills__category {
+    background: #1e1e2f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills__category-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ff7b54;
+}
+
+.skills__list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills__item {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #f1f1f1;
+}
