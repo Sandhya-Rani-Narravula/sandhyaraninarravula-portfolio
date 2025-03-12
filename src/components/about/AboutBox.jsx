@@ -14,7 +14,7 @@ const aboutData = [
     },
     {
         icon: <RiBriefcaseLine />, // Represents Work Experience
-        value: "2+ Years",
+        value: "3+ Years",
         label: "Experience in AI/ML",
     },
     {
