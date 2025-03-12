@@ -1,35 +1,41 @@
 import React from 'react';
-import { RiFireLine, RiGroupLine, RiTrophyLine } from 'react-icons/ri';
+import { RiBookLine, RiCodeBoxLine, RiBriefcaseLine, RiProjectorLine } from 'react-icons/ri'; // Correct icons
+
+const aboutData = [
+    {
+        icon: <RiBookLine />, // Represents Education
+        value: "M.S. in CS",
+        label: "Stony Brook University (2024-2025)",
+    },
+    {
+        icon: <RiCodeBoxLine />, // Represents Skills/Tech
+        value: "10+",
+        label: "Programming Languages & Tools",
+    },
+    {
+        icon: <RiBriefcaseLine />, // Represents Work Experience
+        value: "2+ Years",
+        label: "Experience in AI/ML",
+    },
+    {
+        icon: <RiProjectorLine />, // Represents Projects
+        value: "5+",
+        label: "AI & ML Research Projects",
+    },
+];
 
 const AboutBox = () => {
     return (
         <div className="about__boxes grid">
-            <div className="about__box">
-                <RiFireLine className='about__icon' />
-
-                <div>
-                    <h3 className="about__title">6</h3>
-                    <span className="about__subtitle">Years of Experience</span>
+            {aboutData.map((item, index) => (
+                <div className="about__box" key={index}>
+                    <div className="about__icon">{item.icon}</div>
+                    <div>
+                        <h3 className="about__title">{item.value}</h3>
+                        <span className="about__subtitle">{item.label}</span>
+                    </div>
                 </div>
-            </div>
-
-            <div className="about__box">
-                <RiGroupLine className='about__icon' />
-
-                <div>
-                    <h3 className="about__title">3</h3>
-                    <span className="about__subtitle">Launched Projects</span>
-                </div>
-            </div>
-
-            <div className="about__box">
-                <RiTrophyLine className='about__icon' />
-
-                <div>
-                    <h3 className="about__title">100</h3>
-                    <span className="about__subtitle">Code Quality</span>
-                </div>
-            </div>
+            ))}
         </div>
     );
 }
